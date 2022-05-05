@@ -1,0 +1,146 @@
+body{   
+    width: 200%;
+    height: 200%;
+    background: url(underwater-717622_960_720.jpg) no-repeat;
+    background-size: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
+.img1
+{
+    animation-name: img1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.img2
+{
+    animation-name: img2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.img3
+{
+    animation-name: img3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.text1
+{
+    animation-name: text1;
+    animation-duration: 3s;
+    color: whitesmoke;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.text2
+{
+    animation-name: text2;
+    animation: rotating 4s linear 0s infinite;  
+    border-radius: 60px;
+    color: whitesmoke;
+    height: 120px;  
+    margin: 0;
+    text-align: center;
+    width: 120px;
+}
+
+@keyframes img1
+{
+    from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+      
+}
+
+@keyframes img2
+{
+    0% {
+       transform: translateX(0px) translateY(0px);
+      }    
+    25% {
+        transform: translateX(200px) translateY(0px);
+      }
+    50% {
+        transform: translateX(200px) translateY(200px);
+      }
+    75% {
+        transform: translateX(0px) translateY(200px);
+      }
+    100% {
+        transform: translateX(0px) translateY(0px);
+       }
+}
+
+@keyframes img3
+{
+    0% {
+       transform: translateX(0px) translateY(0px);
+      }    
+    10% {
+        transform: translateX(200px) translateY(0px);
+      }
+    20% {
+        transform: translateX(200px) translateY(-100px);
+      }
+    30% {
+        transform: translateX(300px) translateY(-100px);
+      }
+     40% {
+        transform: translateX(300px) translateY(-200px);
+       }
+       50% {
+        transform: translateX(400px) translateY(-200px);
+       }
+       60% {
+        transform: translateX(400px) translateY(-300px);
+       }
+       70% {
+        transform: translateX(500px) translateY(-300px);
+       }
+       80% {
+        transform: translateX(500px) translateY(-400px);
+       }
+       90% {
+        transform: translateX(600px) translateY(-400px);
+       }
+       100% {
+        transform: translateX(600px) translateY(-500px);
+       }
+}
+
+@keyframes text1
+{
+    from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+      
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+}

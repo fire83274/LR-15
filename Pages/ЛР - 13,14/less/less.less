@@ -1,0 +1,61 @@
+@var1: #4a4a4a;
+@var2: #f9f9f9;
+@var3: #eeeeee;
+@var4: black;
+@a: 24px;
+body {
+	color: @var1;
+	padding-left: 200px;
+	padding-right: 190px;
+	min-width: 240px;
+	font-size: @a;
+
+header, footer {
+	background-color: @var1;
+	color: @var2;
+	margin-left: -200px;
+	margin-right: -190px;
+	&:hover
+{
+	background-color: @var4;
+	color: @var2;
+}
+}
+main {
+	background: @var2;
+	padding: 0 20px;
+	width: 100%;
+	position: relative;
+	float: left;
+}
+nav, aside {
+	background: @var3;
+	position: relative;
+	float: left;
+}
+nav {
+	width: 180px;
+	padding: 0 10px;
+	right: 240px;
+	margin-left: -100%;
+	&:hover
+{
+	background-color: @var4;
+	color: @var2;
+}
+}
+aside {
+	width: 130px;
+	padding: 0 10px;
+	margin-right: -100%;
+&:hover
+{
+	background-color: @var4;
+	color: @var2;
+}
+
+}
+footer {
+	clear: both;
+}
+}

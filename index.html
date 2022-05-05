@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         div.scrollup {
+    position: fixed; /* фиксированная позиция */
+    color: #fff; /* цвет текста */
+    background-color: rgb(252 165 165);
+    right: 20px; /* расстояние от правого края */
+    bottom: 0px; /* расстояние от нижнего края */
+    padding: 4px 10px; /* отступы до содержимого блока */
+    font-size: 20px; /* размер шрифта (иконки) */
+    border-top-left-radius: 4px; /* скругление верхнего левого угла */
+    border-top-right-radius: 4px; /* скругление верхнего правого угла */
+    cursor: pointer; /* форма курсора */
+    display: none; /* не отображать элемент */
+    text-align: center; /*выравнивание содержимого элемента по центру */
+  }
+  div.scrollup:hover {
+    background-color: rgb(239 68 68); /* цвет заднего фона при наведении */
+  }
+    </style>
+</head>
+<body class="bg-zinc-900 text-red-50 text-lg">
+    <div class="container mx-auto px-4">
+        <header class="flex flex-col justify-between text-center p-4 items-center mx-auto bg-red-100 text-zinc-900 sm:flex-row">
+            <div class="w-20">
+                <img src="Assets/img/logo.png" class="w-auto h-auto" alt=""> ЛР-15
+            </div>
+            <div class="flex flex-col justify-around sm:flex-row">
+                <div class="px-1 py-2 sm:px-2 md:px-4"><a href="#goal">Цель</a></div>
+                <div class="px-1 py-2 sm:px-2 md:px-4"><a href="#sv">Теоретические сведения</a></div>
+                <div class="px-1 py-2 sm:px-2 md:px-4"><a href="#lr">Лабораторные работы</a></div>
+            </div>
+        </header>
+
+        <div class="scrollup">
+            <!-- Иконка fa-chevron-up (Font Awesome) -->
+            <i class="fa fa-chevron-up"></i>
+          </div>
+          <script>
+            $(function() {
+              // при нажатии на кнопку scrollup
+              $('.scrollup').click(function() {
+                // переместиться в верхнюю часть страницы
+                $("html, body").animate({
+                  scrollTop:0
+                },1000);
+              })
+            })
+            // при прокрутке окна (window)
+            $(window).scroll(function() {
+              // если пользователь прокрутил страницу более чем на 200px
+              if ($(this).scrollTop()>10) {
+                // то сделать кнопку scrollup видимой
+                $('.scrollup').fadeIn();
+              }
+              // иначе скрыть кнопку scrollup
+              else {
+                $('.scrollup').fadeOut();
+              }
+            });
+            </script>
+
+        <h1 class="text-center text-3xl mt-5" id="goal">Цель</h1>
+        <div class="grid grid-cols-1 gap-1 py-8 text-justify md:grid-cols-1 gap-1 text-xl">
+            Цель работы: закрепить умения и навыки создания html-страниц                                                
+        </div>
+
+        <h1 class="text-center text-3xl mt-5" id="sv">Теоретические сведения</h1>
+        <div class="grid grid-cols-1 gap-1 py-8 text-justify md:grid-cols-1 gap-1 text-xl">            
+            К основным этапам создания веб-сайта относится: <br>
+            •	Постановка целей и задач сайта;<br>
+            •	Создание, проработка технического задания (ТЗ) на разработку сайта;<br>
+            •	Прототипирование;<br>
+            •	Создание макета дизайна сайта;<br>
+            •	Верстка;<br>
+            •	Программирование;<br>
+            •	Наполнение контентом;<br>
+            •	Тестирование;<br>
+            •	Сдача готового проекта клиенту<br>
+                                                            
+        </div>
+
+        <h1 class="text-center text-3xl mt-5" id="lr">Лабораторные работы</h1>
+        <div class="grid grid-cols-1 gap-1 py-8 text-justify text-zinc-900 sm:grid-cols-2 gap-2 md:grid-cols-3 gap-3">
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №1</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 1/1_name.html" target="_blank">Перейти к ЛР</a>
+            </div>       
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №2</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 2/admin2/index.html" target="_blank">Перейти к ЛР</a>
+            </div>      
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №3</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 3/1_name.html" target="_blank">Перейти к ЛР</a>
+            </div>      
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №4</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 4/1.html" target="_blank">Перейти к ЛР</a>
+            </div>    
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №5</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 5/1.html" target="_blank">Перейти к ЛР</a>
+            </div>       
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №6</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 6/index.html" target="_blank">Перейти к ЛР</a>
+            </div>      
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №7</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 7/Задание 2/index.html" target="_blank">Перейти к ЛР</a>
+            </div>      
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №8</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 8/Три колонки/index.html" target="_blank">Перейти к ЛР</a>
+            </div> 
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №9</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 9/Задание/index.html" target="_blank">Перейти к ЛР</a>
+            </div>       
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №10</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 10/index.html" target="_blank">Перейти к ЛР</a>
+            </div>      
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №11,12</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 11,12/index.html" target="_blank">Перейти к ЛР</a>
+            </div>      
+            <div class="rounded-lg bg-red-200 h-auto flex flex-col  items-center">
+                <div class="p-2 m-auto md:p-4 news-title">Лабораторная работа №13,14</div>
+            <a class="rounded-lg bg-red-300 p-2 text-center border w-1/2 my-2 md:my-4" href="Pages/ЛР - 13,14/less/less.html" target="_blank">Перейти к ЛР</a>
+            </div>                      
+        </div>
+
+        <footer class="text-center bg-red-300 text-zinc-900" >
+            <div class="container p-6">
+              <div class="">
+                <p class="flex justify-center items-center">
+                  <span class="mr-4 text-xl text-bold">8-800-555-35-35</span>                  
+                </p>
+              </div>
+            </div>
+          
+            <div class="text-center p-4 bg-zinc-900 text text-zinc-900" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2022 Copyright:
+              <a class="" href="https://tailwind-elements.com/">ЛР - 15</a>
+            </div>
+          </footer>
+        </div>
+</body>
+</html>

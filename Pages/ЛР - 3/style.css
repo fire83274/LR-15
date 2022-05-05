@@ -1,0 +1,30 @@
+.text-right
+{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: .3;
+    text-align: right;
+}
+.text-left
+{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: .3;
+    text-align: left;
+}
+.text-center
+{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: .3;
+    text-align: center;
+}
+body
+{
+    background-color: black;
+    color: white;
+}
+.ul
+{
+    list-style-type: square;
+}
